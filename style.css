@@ -31,13 +31,15 @@ h4{
 }
 
 #contact, #a_propos, #loisirs, #presentation{
-    display: none;
+    visibility : hidden;
+    height : 0px;
+
 }
 
 #gauche{
     background-color: #424242;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,6 +150,7 @@ footer{
     color: #FDD835;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom : 20px;
 }
 
 #telephone br{
@@ -175,3 +178,119 @@ footer section{
     margin-right: 20px;
 }
 
+@media screen and (min-width : 1024px){
+    #contact, #a_propos, #loisirs, #presentation{
+        visibility : visible;
+        height: 200px;
+    }
+
+    #gauche{
+        position:fixed;
+        align-items: flex-start;
+        background-color: #FDD835;
+        color: #424242;
+        height: 100%;
+        width: 20%;
+    }
+
+    #photo{
+        overflow: hidden;
+        background-image: url("Images/IMG_4068.jpg");
+        background-size: 200px 200px;
+        background-repeat:no-repeat ;
+        border-radius: 50%;
+        -webkit-border-radius:50%;
+        -moz-border-radius:50%;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        
+    }
+
+    #presentation_2{
+        display:none;
+    }
+
+    footer{
+        display : none;
+    }
+    
+    body{
+        display:flex; 
+    }
+
+    #droite{
+        width: 80%;
+        position: relative;
+        left:20%;
+    }
+
+    #contact{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    #contact h2{ 
+        text-align: center;
+        padding-top: 10px;
+        height: 30px;
+        background-color: #424242;
+        color: #FDD835;
+        margin-bottom : 20px;
+    }
+
+    #contact p{
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+
+    #a_propos{
+        margin-top: 40px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #a_propos h2{ 
+        text-align: center;
+        padding-top: 10px;
+        height: 30px;
+        background-color: #424242;
+        color: #FDD835;
+        margin-bottom: 20px;
+    
+    }
+    #a_propos p{
+        margin-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #loisirs{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    #loisirs h2{ 
+        text-align: center;
+        padding-top: 10px;
+        height: 30px;
+        background-color: #424242;
+        color: #FDD835;
+        margin-bottom : 15px;
+    }
+
+    #box_icone{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .icone_loisirs i{
+        font-size: 25px;
+    }
+}
